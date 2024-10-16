@@ -10,7 +10,9 @@ function HeroSection() {
             <h1 
                 className='font-semibold text-[40px] leading-[48px] font-[Poppins] text-[#26231E]'
                 >
-                    Stay Informed, Stay Inspired
+                    Stay <br className='hidden lg:block'/>
+                    Informed, <br className='hidden lg:block'/>
+                    Stay Inspired
             </h1>
 
             <h2
