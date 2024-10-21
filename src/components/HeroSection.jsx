@@ -5,7 +5,6 @@ function HeroSection() {
   return (
     <div className='border-t border-[#DAD6D1] text-center py-10 lg:py-16 px-4 flex flex-col gap-10 lg:flex-row lg:gap-16 lg:items-center'>
 
-        <div></div>
         <div className='flex flex-col gap-6 lg:text-right'>
             <h1 
                 className='font-semibold text-[40px] leading-[48px] font-[Poppins] text-[#26231E]'
