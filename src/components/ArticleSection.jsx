@@ -10,8 +10,6 @@ import {
 
 import { Input } from "@/components/ui/input"
 
-import { Button } from "@/components/ui/Button"
-
 import {
     Select,
     SelectContent,
@@ -97,10 +95,10 @@ function ArticleSection() {
     </div>
 
     <div className="w-full flex items-center justify-center py-12 lg:py-16">
-        <Button 
+        <button 
             className="bg-transparent hover:bg-transparent text-[#26231E] underline"
                 >View more
-        </Button>
+        </button>
     </div>
     </section>
   );
