@@ -1,13 +1,6 @@
 import React from "react";
 import { blogPosts } from "@/data/BlogPosts";
 import { Search } from 'lucide-react';
-
-import {
-  Menubar,
-  MenubarMenu,
-  MenubarTrigger,
-} from "@/components/ui/menubar";
-
 import { Input } from "@/components/ui/input"
 
 import {
@@ -20,6 +13,8 @@ import {
 import BlogCard from "./BlogCards";
 
 function ArticleSection() {
+  const categories = ["Highlight", "Cat", "Inspiration", "General"];
+
   return (
     <section className="lg:px-32 px-0">
 
@@ -29,27 +24,15 @@ function ArticleSection() {
 
       <div className="flex items-center flex-col lg:flex-row justify-between bg-[#EFEEEB] py-4 lg:px-6 rounded-md px-3 gap-4">
 
-        <Menubar className="bg-[#EFEEEB] gap-2 font-[Poppins] text-[#75716B] items-center border-none hidden lg:flex">
-          <MenubarMenu>
+        <div className="bg-[#EFEEEB] gap-2 font-[Poppins] text-[#75716B] items-center border-none hidden lg:flex">
+          {categories.map((button,index)=>{
+            return (
+                <button key={index}  className="py-3 px-5 hover:bg-[#DAD6D1] hover:text-[#43403B] rounded-md"
+                  >{button}
+                </button>
+            )})}
+        </div>
 
-            <MenubarTrigger className="py-3 px-5 hover:bg-[#DAD6D1] hover:text-[#43403B]">
-              Highlight
-            </MenubarTrigger>
-
-            <MenubarTrigger className="py-3 px-5 hover:bg-[#DAD6D1] hover:text-[#43403B]">
-              Cat
-            </MenubarTrigger>
-
-            <MenubarTrigger className="py-3 px-5 hover:bg-[#DAD6D1] hover:text-[#43403B]">
-              Inspiration
-            </MenubarTrigger>
-
-            <MenubarTrigger className="py-3 px-5 hover:bg-[#DAD6D1] hover:text-[#43403B]">
-              Ganeral
-            </MenubarTrigger>
-
-          </MenubarMenu>
-        </Menubar>
 
         <div className="lg:w-1/3 w-full flex items-center bg-white p-3 gap-1 border border-[#DAD6D1] rounded-sm">
 
@@ -63,18 +46,19 @@ function ArticleSection() {
 
         <div className="w-full flex flex-col gap-1 text-[#75716B] font-[Poppins] lg:hidden">
             <label htmlFor="Category">Category</label>
-          <Select className>
-
+            
+          <Select className> 
             <SelectTrigger className="w-full">
               <SelectValue placeholder="Highligth" />
             </SelectTrigger>
 
-            <SelectContent>
-              <SelectItem value="highligth">Highligth</SelectItem>
-              <SelectItem value="cat">Cat</SelectItem>
-              <SelectItem value="inspiration">Inspiration</SelectItem>
-              <SelectItem value="general">Ganeral</SelectItem>
-            </SelectContent>
+            <SelectContent >
+              {categories.map((categorie,index)=>{
+                return(
+                    <SelectItem key={index} value={categorie}>{categorie}</SelectItem>
+                  )
+                })}
+              </SelectContent>
 
           </Select>
         </div>
