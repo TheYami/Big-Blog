@@ -3,7 +3,7 @@ import profile from '.././assets/img/profile.jpg'
 
 function HeroSection() {
   return (
-    <div className='border-t border-[#DAD6D1] text-center lg:px-24 xl:px-32 py-10 lg:py-16 px-4 flex flex-col gap-10 lg:flex-row lg:gap-16 lg:items-center'>
+    <div className='bg-[#F9F8F6] text-center lg:px-24 xl:px-32 py-10 lg:py-16 px-4 flex flex-col gap-10 lg:flex-row lg:gap-16 lg:items-center'>
 
         <div className='flex flex-col gap-6 lg:text-right'>
             <h1 
